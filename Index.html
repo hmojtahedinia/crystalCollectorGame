@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+</head>
+
+<style>
+body {
+ background-image: url("5.jpg");
+}
+
+
+#button1, #button2, #button3, #button4{
+    background-color: rgba(165, 42, 42, 0.479);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    float: right;
+    overflow: auto;
+
+}
+
+h1 {
+    font-style: italic;    
+    text-align: center;
+}
+h2{
+    text-align: center;
+    margin: 5% 10% 5% 10%;
+    
+
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+}
+
+
+
+</style>
+
+
+
+
+
+<body >
+
+    <h1>Crystals Collector</h1>
+    <h2>
+        You will be given a random number at the start of the game.<br>
+        There are four crystals below. By clickin on a crystal you add a specific amount of points to your total score.<br>
+        You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>
+        The value of each Crystal is hidden from you until you click on it.<br>
+        Each time when the game starts, the game will change the value of each crystal.
+    </h2>
+
+    <button id="button1"><img src="1.jpg"></button>
+    <button id="button2"><img src="2.jpg"></button>
+    <button id="button3"><img src="3.jpg"></button>
+    <button id="button4"><img src="4.jpg"></button>
+    <p>Random Number: <span id="randomNumber1"></span></p>
+
+    <p>Total score: <span id="totalScore"></span></p>
+    <p>Winner: <span id="winner"></span></p>
+    <p>Loss: <span id="losses"></span></p>
+
+
+
+<script>
+
+    var button1 = 1;
+    var button2 = 2;
+    var button3 = 3;
+    var button4 = 5;
+    var totalScore = 0;
+    var randomNumber = Math.floor((Math.random() * 100) - 51);
+        randomNumber = Math.abs(randomNumber);
+    var winner = 0;
+    var losses = 0;
+  
+
+
+    myFunction = function(){          
+           return document.getElementById("randomNumber1").innerHTML = randomNumber;
+        };
+
+    $(document).ready(myFunction());  
+
+    
+
+
+    myFunction1 = function(){
+        totalScore = totalScore + button1;
+        document.getElementById("totalScore").innerHTML = totalScore;
+        console.log(totalScore);
+        console.log(randomNumber);
+        if(totalScore == randomNumber){
+            window.alert("You Win!")
+            totalScore = 0;
+            winner++;
+            document.getElementById("winner").innerHTML = winner;
+
+            randomNumber = Math.floor((Math.random() * 100) - 51);
+            randomNumber = Math.abs(randomNumber);
+            document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }else{
+            if(totalScore > randomNumber){
+                window.alert("You Lose!");
+                totalScore = 0;
+                losses++;
+                document.getElementById("losses").innerHTML = losses;
+
+                randomNumber = Math.floor((Math.random() * 100) - 51);
+                randomNumber = Math.abs(randomNumber);
+                document.getElementById("randomNumber1").innerHTML = randomNumber;
+
+        }
+    }
+
+    }
+
+    myFunction2 = function(){
+        totalScore = totalScore + button2;
+        document.getElementById("totalScore").innerHTML = totalScore;
+        console.log(totalScore);
+        console.log(randomNumber);
+        if(totalScore == randomNumber){
+            window.alert("You Win!")
+            totalScore = 0;
+            winner++;
+            document.getElementById("winner").innerHTML = winner;
+
+            randomNumber = Math.floor((Math.random() * 100) - 51);
+            randomNumber = Math.abs(randomNumber);
+            document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }else{
+            if(totalScore > randomNumber){
+                window.alert("You Lose!");
+                totalScore = 0;
+                losses++;
+                document.getElementById("losses").innerHTML = losses;
+
+                randomNumber = Math.floor((Math.random() * 100) - 51);
+                randomNumber = Math.abs(randomNumber);
+                document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }
+    }
+
+    }
+
+    myFunction3 = function(){
+        totalScore = totalScore + button3;
+        document.getElementById("totalScore").innerHTML = totalScore;
+        console.log(totalScore);
+        console.log(randomNumber);
+        if(totalScore == randomNumber){
+            window.alert("You Win!")
+            totalScore = 0;
+            winner++;
+            document.getElementById("winner").innerHTML = winner;
+
+            randomNumber = Math.floor((Math.random() * 100) - 51);
+            randomNumber = Math.abs(randomNumber);
+            document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }else{
+            if(totalScore > randomNumber){
+                window.alert("You Lose!");
+                totalScore = 0;
+                losses++;
+                document.getElementById("losses").innerHTML = losses;
+
+                randomNumber = Math.floor((Math.random() * 100) - 51);
+                randomNumber = Math.abs(randomNumber);
+                document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }
+    }
+
+    }
+
+    myFunction4 = function(){
+        totalScore = totalScore + button4;
+        document.getElementById("totalScore").innerHTML = totalScore;
+        console.log(totalScore);
+        console.log(randomNumber);
+        if(totalScore == randomNumber){
+            window.alert("You Win!")
+            totalScore = 0;
+            winner++;
+            document.getElementById("winner").innerHTML = winner;
+
+            randomNumber = Math.floor((Math.random() * 100) - 51);
+            randomNumber = Math.abs(randomNumber);
+            document.getElementById("randomNumber1").innerHTML = randomNumber;
+            }else{
+                if(totalScore > randomNumber){
+                    window.alert("You Lose!");
+                    totalScore = 0;
+                    losses++;
+                    document.getElementById("losses").innerHTML = losses;
+
+                    randomNumber = Math.floor((Math.random() * 100) - 51);
+                    randomNumber = Math.abs(randomNumber);
+                    document.getElementById("randomNumber1").innerHTML = randomNumber;
+        }
+    }
+
+    }
+
+
+$("#button1").click(myFunction1) 
+
+$("#button2").click(myFunction2)
+
+$("#button3").click(myFunction3)
+    
+$("#button4").click(myFunction4)
+
+            
+       //     var randomNumber = Math.floor((Math.random() * 100) - 51);
+       //     var randomNumber = Math.abs(randomNumber);
+       //     document.getElementById("randomNumber").innerHTML = randomNumber;
+       // })      
+
+
+    
+           // document.getElementById("totalScore").innerHTML = totalScore;        
+        
+
+
+  
+        
+    /*    var q = window.setInterval(returnANumberDivsibleByFive,250);
+        var returnedNumber = 0;
+
+        function returnANumberDivsibleByFive(){
+            var randomNumber = Math.floor((Math.random() * 100) + 1);
+            console.log('random number is ', randomNumber);
+            if (randomNumber%5===0){
+                window.clearInterval(q);
+                returnedNumber = randomNumber;
+                document.getElementById("randomNumber").innerHTML = randomNumber;
+            }
+            
+        }
+    */
+  
+ 
+    
+    
+   
+      
+    
+    
+    
+    
+
+
+
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>
